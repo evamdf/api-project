@@ -13,5 +13,8 @@ func Setup(r *gin.Engine) {
 	{
 		v1.GET("/health", handlers.HealthCheck)
 		v1.GET("/artists", handlers.GetArtists)
+		v1.GET("/playlists", handlers.GetPlaylists)
+		v1.GET("/playlists/:id/tracks", handlers.GetPlaylistTracks)
+
 	}
 }
